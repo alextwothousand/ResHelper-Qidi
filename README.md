@@ -1,4 +1,7 @@
-# ResHelper
+# ResHelper-Qidi
+Fixing Qidi's fuck up circa 2024.
+
+Original comment:
 A series of scripts designed to streamline Klipper's resonance testing workflow
 
 ### What does this do?

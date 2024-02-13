@@ -21,7 +21,7 @@ Throughout the process there is no need to connect to the PI by SSH or SFTP.
 
 They didn't even bother installing a time sync server on the mks-pi. Probably not Qidi's fault, lol.
 
-(if it says the file isnt executable) `chmod +x fix_qidi_fuckup.sh`
+`chmod +x fix_qidi_fuckup.sh` (ONLY if it says the file isnt executable)
 
 `./fix_qidi_fuckup.sh`
 

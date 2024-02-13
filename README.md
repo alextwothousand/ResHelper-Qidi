@@ -12,20 +12,30 @@ Throughout the process there is no need to connect to the PI by SSH or SFTP.
 
 ## Installation:
 
-#### 1. Download and install ResHelper Scripts 
+#### 1. Download ResHelper Scripts 
 
 `git clone https://github.com/lhndo/ResHelper.git`<br>
 `cd ResHelper`<br>
+
+#### 2. Fix Qidi's Fuckup
+
+They didn't even bother installing a time sync server on the mks-pi. Probably not Qidi's fault, lol.
+
+(if it says the file isnt executable) `chmod +x fix_qidi_fuckup.sh`
+`./fix_qidi_fuckup.sh`
+
+### 3. Install ResHelper
+
 `./install.sh`<br>
 
-#### 2. Install Rscript
+#### 4. Install Rscript
 
 `sudo apt install r-base`<br>
 `sudo Rscript install_rs_lib.R`
 
 <br> Note: *If the library install fails, try installing a Fortran compiler: `sudo apt-get install gfortran` then rerun `sudo Rscript install_rs_lib.R`*   
 
-#### 3. Install G-Code Shell Command
+#### 5. Install G-Code Shell Command
 **KIAUH**  
 Launch ./kiauh, then go to Advance> Extras> G-Code Shell Command
 
@@ -37,12 +47,12 @@ Restart the klipper service
 Gcode Shell Command info:
 https://github.com/th33xitus/kiauh/blob/master/docs/gcode_shell_command.md
 
-#### 4. Include the configuration file in your printer.cfg
+#### 6. Include the configuration file in your printer.cfg
 
 `[include reshelper.cfg]` <br>
 Note: If your host user name is not "pi", then you have to change the paths in reshelper.cfg
 
-#### 5. Restart Klipper
+#### 7. Restart Klipper
 
 <br><br>
 
